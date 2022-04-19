@@ -3,7 +3,20 @@
 <html class="m">
 <link rel="stylesheet" href="styles.css">
   <header>
-    <img src="stonks.jpg" alt="Wilbert Lee's profile picture" class="profile-thumbnail">
+    <script>
+    var i = 0;
+var txt = 'In omibus amare et servire domino In everything love and serve the lord...';
+var speed = 100;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+    <img src="stonks.jpg" alt="Stonks's profile picture" class="profile-thumbnail">
     <div class="profile-name">
       <h3>Stonks</h3>
       <h4>@stonks</h4>
@@ -14,7 +27,8 @@
   </header>
   <body>
   <div id="inner">
-    <p>:/</p>
+    <body onload="typeWriter()">
+    <p id="demo"></p>
     <span class="date">15:13 PM - 7 Apr 2022</span>
     <hr>
   </div>
